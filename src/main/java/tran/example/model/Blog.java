@@ -235,14 +235,10 @@ public class Blog {
 		}
 	}
 
-	public boolean canUserPost(LocalDateTime lastPostedTime) {
-		LocalDateTime current_time = LocalDateTime.from(setDate());
-		LocalDateTime user_last_posted_time = LocalDateTime.from(lastPostedTime);
-		Duration difference = Duration.between(user_last_posted_time, current_time);
-
-		System.out.println(difference.getSeconds());
-		return difference.getSeconds() >= 30 ? true : false;
+	/**
+	 * @return True if the blog post has been modified.
+	 */
+	public boolean hasPostBeenModified() {
+		return !(this.fullDateCreated.equals(this.fullDateModified));
 	}
-
-
 }

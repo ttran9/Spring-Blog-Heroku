@@ -1,20 +1,17 @@
 package tran.example.model.DAO;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
-import javax.sql.DataSource;
-
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
-
 import tran.example.model.CustomUser;
 import tran.example.model.Role;
 import tran.example.model.User;
+
+import javax.sql.DataSource;
+import java.time.LocalDateTime;
 
 public class UserDAO {
 
@@ -120,9 +117,9 @@ public class UserDAO {
 	}
 
 	// update the time a user has last posted.
-	public int updateLastPostedTimeForUser(String userName){
+	public int updateLastPostedTimeForUser(LocalDateTime current_time, String userName){
 		try {
-			return jdbcTemplateObject.update(UPDATE_LAST_POSTED_TIME, userName);
+			return jdbcTemplateObject.update(UPDATE_LAST_POSTED_TIME, current_time, userName);
 		}
 		catch(DataAccessException e) {
 			return -1; // couldn't update the last posted time.
@@ -134,7 +131,10 @@ public class UserDAO {
 		boolean canPost = false;
 		try {
 			User user = jdbcTemplateObject.queryForObject(GET_USER, new Object[]{userName}, new UserMapper());
-			if (user != null) {
+			if(user != null &&  user.getLastPostedTime() == null) {
+				canPost = true;
+			}
+			else if (user != null && user.getLastPostedTime() != null) {
 				canPost = user.canUserPost(user.getLastPostedTime());
 			}
 		}

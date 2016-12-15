@@ -60,13 +60,14 @@ public class BlogDAO {
 	
 	// get a single Blog using the ID.
 	public Blog getaBlog(int blogID) {
-		Blog singlePost = new Blog();
+		Blog singlePost;
 		try {
 			LocalDateTime current_time = setDate();
 			singlePost = jdbcTemplateObject.queryForObject(GET_BLOG_POST, new Object[]{blogID}, new BlogMapper(current_time));
 		}
 		catch(DataAccessException e) {
 			e.printStackTrace();
+			singlePost = null;
 		}
 		return singlePost;
 	}

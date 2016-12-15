@@ -24,28 +24,19 @@
 	    	</div>
 
 		    <div class="container">
-				<div class="blog-header">
-			        <h1 class="blog-title">Edit Post</h1>
-			        <p class="lead blog-description">Fill in the information below to edit your post!</p>
+				<form class="form-signin" action = "<c:url value="/processEditPost"/>" method="post">
 					<c:if test = "${errorMessage!= null}" >
 						<p class="lead blog-description">${errorMessage}</p>
 					</c:if>
-				</div>
-		
-				<div class="row">
-					<div class="col-sm-8 blog-main">
-						<div class="blog-post">
-							<form action = "<c:url value="/processEditPost"/>" method="post">
-								<h2 class="blog-post-title">${postToEdit.getTitle()}</h2><br/>
-								<label>Content:</label><br/>
-								<textarea rows = "8" cols = "80" name = "content">${postToEdit.getContent()}</textarea> <br/> <br/>
-								<button type="submit">Edit Post</button>
-								<input type="hidden" name="blogID" value="${postToEdit.getPostID()}"/>
-								<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-							</form>
-		          		</div><!-- /.blog-post -->
-		        	</div><!-- /.blog-main -->
-		      	</div><!-- /.row -->
+					<h2 class="form-signin-heading">Edit Your Post</h2><br/>
+					<label for="title">Post Title:</label>
+					<input type="text" id="title" name="title" class="form-control" maxlength="50" size="50" value="${postToEdit.getTitle()}" readonly>
+					<label for="content">Content:</label><br/>
+					<textarea class="form-control" rows="8" cols="80" id="content" name="content">${postToEdit.getContent()}</textarea> <br/> <br/>
+					<button class="btn btn-lg btn-primary btn-block" type="submit">Edit Post</button>
+					<input type="hidden" name="blogID" value="${postToEdit.getPostID()}"/>
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+				</form>
 		    </div><!-- /.container -->
 	    </c:when>
 	    

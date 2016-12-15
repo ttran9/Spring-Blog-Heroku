@@ -1,8 +1,5 @@
 package tran.example.controller;
 
-import java.security.Principal;
-import java.util.List;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -11,10 +8,15 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import tran.example.model.Blog;
 import tran.example.model.DAO.BlogDAO;
 import tran.example.model.DAO.UserDAO;
+
+import java.security.Principal;
+import java.sql.Timestamp;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Controller
 public class EditPostController {
@@ -75,7 +77,12 @@ public class EditPostController {
 						((ConfigurableApplicationContext) appContext).close();
 						if (newPost != null) {
 							model.addAttribute("error", updatePostMessage);
+							model.addAttribute("loggedInName", userName);
 							model.addAttribute("postContents", newPost);
+							boolean isAuthorOfPost = editPost.isAuthorOfPost(userName, Integer.parseInt(blogID));
+							model.addAttribute("isAuthorOfPost", isAuthorOfPost);
+							LocalDateTime current_time = Timestamp.from(Instant.now()).toLocalDateTime();
+							userDAO.updateLastPostedTimeForUser(current_time, userName);
 							return "showSinglePost";
 						} else {
 							// since the post cannot be found do not pass in a blogID parameter.

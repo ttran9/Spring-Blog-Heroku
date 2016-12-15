@@ -1,7 +1,5 @@
 package tran.example.controller;
 
-import java.security.Principal;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -10,10 +8,13 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import tran.example.model.Blog;
 import tran.example.model.DAO.BlogDAO;
 import tran.example.model.DAO.UserDAO;
+
+import java.security.Principal;
+import java.sql.Timestamp;
+import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Controller
 public class AddPostController {
@@ -47,8 +48,12 @@ public class AddPostController {
 				UserDAO userDAO = (UserDAO)appContext.getBean("userDS");
 				if(userDAO.canUserPost(userName)) {
 					BlogDAO getPosts = (BlogDAO) appContext.getBean("BlogDS");
-					int createPostMessage = getPosts.addBlog(title, content, userName);
 					((ConfigurableApplicationContext) appContext).close();
+					int createPostMessage = getPosts.addBlog(title, content, userName);
+					if(createPostMessage != -1) {
+						LocalDateTime current_time = Timestamp.from(Instant.now()).toLocalDateTime();
+						userDAO.updateLastPostedTimeForUser(current_time, userName);
+					}
 					return "redirect:showSinglePost?blogID=" + createPostMessage;
 				}
 				else {

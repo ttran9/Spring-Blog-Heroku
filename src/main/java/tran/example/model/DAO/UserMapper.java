@@ -1,9 +1,10 @@
 package tran.example.model.DAO;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
 import tran.example.model.User;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class UserMapper implements RowMapper<User> {
    public User mapRow(ResultSet rs, int rowNum)  {
@@ -13,7 +14,7 @@ public class UserMapper implements RowMapper<User> {
 		   user.setPassword(rs.getString("user_Password"));
 		   user.setEnabled(rs.getBoolean("enabled"));
 		   user.setUserId(rs.getInt("user_ID"));
-		   user.setLastPostedTime(rs.getTimestamp("last_posted_time").toLocalDateTime());
+		   if(rs.getTimestamp("last_posted_time") != null) user.setLastPostedTime(rs.getTimestamp("last_posted_time").toLocalDateTime());
 	   }
 	   catch(SQLException e) {
 		   e.printStackTrace();

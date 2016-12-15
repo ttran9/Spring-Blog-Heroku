@@ -38,8 +38,7 @@ public class DeletePostController {
 						((ConfigurableApplicationContext)appContext).close();
 						if(listOfBlogs.size() > 0)
 							model.addAttribute("blogs", listOfBlogs);
-						
-						return "showPosts";
+						return "redirect:showPosts";
 					}
 					else {
 						model.addAttribute("error", deletePostMessage);
