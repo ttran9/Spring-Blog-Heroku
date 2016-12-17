@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import tran.example.presentation.model.Blog;
-import tran.example.dao.BlogDAO;
+import tran.example.data.BlogDAO;
 
 @Controller
 public class ShowSinglePost {

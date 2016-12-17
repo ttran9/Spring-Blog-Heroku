@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="java.util.List"%>
-<%@ page import="tran.example.model.Blog"%>
+<%@ page import="tran.example.presentation.model.Blog"%>
 <!DOCTYPE html>
 <html>
 <head>

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import tran.example.presentation.model.User;
-import tran.example.dao.UserDAO;
+import tran.example.data.UserDAO;
 
 @Controller
 public class RegisterFormController {

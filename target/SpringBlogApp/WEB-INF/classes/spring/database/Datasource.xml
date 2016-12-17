@@ -21,13 +21,13 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
    </bean>
 	
 	<bean id="userDS" 
-      class="tran.example.model.DAO.UserDAO">
+      class="tran.example.dao.UserDAO">
       <property name="dataSource"  ref="dataSource" />    
       <property name="transactionManager"  ref="transactionManager" /> 
    </bean>
     
    <bean id="BlogDS" 
-      class="tran.example.model.DAO.BlogDAO">
+      class="tran.example.dao.BlogDAO">
       <property name="dataSource" ref="dataSource" />  
       <property name="transactionManager"  ref="transactionManager" />   
    </bean>

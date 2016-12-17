@@ -2,66 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d02dcbaa-0c69-48ef-b095-b05d0e4d4e42" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/security/CustomUserService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/security/CustomUserService.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/controller/AddPostController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/AddPostController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/controller/DeletePostController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/DeletePostController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/controller/EditPostController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/EditPostController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/controller/LoginFormController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/LoginFormController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/controller/LogoutController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/LogoutController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/controller/RegisterFormController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/RegisterFormController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/controller/ShowPostsController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/ShowPostsController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/controller/ShowSinglePost.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/ShowSinglePost.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/model/Blog.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/model/Blog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/model/CustomUser.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/model/CustomUser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/model/DAO/BlogDAO.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/dao/BlogDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/model/DAO/BlogMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/dao/BlogMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/model/DAO/CustomUserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/dao/CustomUserMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/model/DAO/RoleMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/dao/RoleMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/model/DAO/UserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/dao/UserDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/model/DAO/UserGetPasswordMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/dao/UserGetPasswordMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/model/DAO/UserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/dao/UserMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/model/DAO/UserNameMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/dao/UserNameMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/model/Role.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/model/Role.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/model/User.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/model/security/CustomAuthenticationProvider.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/security/CustomAuthenticationProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/model/security/UserDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/security/UserDAOImpl.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/controller/AddPostController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/controller/DeletePostController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/controller/EditPostController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/controller/LoginFormController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/controller/LogoutController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/controller/RegisterFormController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/controller/ShowPostsController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/controller/ShowSinglePost.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/Blog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/CustomUser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/DAO/BlogDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/DAO/BlogMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/DAO/CustomUserMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/DAO/RoleMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/DAO/UserDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/DAO/UserGetPasswordMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/DAO/UserMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/DAO/UserNameMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/Role.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/security/CustomAuthenticationProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/security/UserDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/controller/AddPostController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/controller/DeletePostController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/controller/EditPostController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/controller/LoginFormController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/controller/LogoutController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/controller/RegisterFormController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/controller/ShowPostsController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/controller/ShowSinglePost.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/Blog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/CustomUser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/DAO/BlogDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/DAO/BlogMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/DAO/CustomUserMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/DAO/RoleMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/DAO/UserDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/DAO/UserGetPasswordMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/DAO/UserMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/DAO/UserNameMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/Role.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/security/CustomAuthenticationProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/security/UserDAOImpl.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/dao/BlogDAO.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/data/BlogDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/dao/BlogMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/data/BlogMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/dao/CustomUserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/data/CustomUserMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/dao/RoleMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/data/RoleMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/dao/UserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/data/UserDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/dao/UserGetPasswordMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/data/UserGetPasswordMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/dao/UserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/data/UserMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/dao/UserNameMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/data/UserNameMapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/security/CustomAuthenticationProvider.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/service/CustomAuthenticationProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/security/UserDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/service/UserDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp.war" afterPath="$PROJECT_DIR$/target/SpringBlogApp.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/controller/AddPostController.class" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/controller/AddPostController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/controller/DeletePostController.class" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/controller/DeletePostController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/controller/EditPostController.class" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/controller/EditPostController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/controller/ShowSinglePost.class" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/controller/ShowSinglePost.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/Blog.class" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/Blog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/DAO/BlogDAO.class" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/DAO/BlogDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/DAO/BlogMapper.class" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/DAO/BlogMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/DAO/UserDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/DAO/UserMapper.class" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/DAO/UserMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/User.class" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/security/CustomAuthenticationProvider.class" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/tran/example/model/security/CustomAuthenticationProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tran/example/controller/AddPostController.class" afterPath="$PROJECT_DIR$/target/classes/tran/example/controller/AddPostController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tran/example/controller/DeletePostController.class" afterPath="$PROJECT_DIR$/target/classes/tran/example/controller/DeletePostController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tran/example/controller/EditPostController.class" afterPath="$PROJECT_DIR$/target/classes/tran/example/controller/EditPostController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tran/example/controller/ShowSinglePost.class" afterPath="$PROJECT_DIR$/target/classes/tran/example/controller/ShowSinglePost.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/Blog.class" afterPath="$PROJECT_DIR$/target/classes/tran/example/model/Blog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/DAO/BlogDAO.class" afterPath="$PROJECT_DIR$/target/classes/tran/example/model/DAO/BlogDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/DAO/BlogMapper.class" afterPath="$PROJECT_DIR$/target/classes/tran/example/model/DAO/BlogMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/target/classes/tran/example/model/DAO/UserDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/DAO/UserMapper.class" afterPath="$PROJECT_DIR$/target/classes/tran/example/model/DAO/UserMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/User.class" afterPath="$PROJECT_DIR$/target/classes/tran/example/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tran/example/model/security/CustomAuthenticationProvider.class" afterPath="$PROJECT_DIR$/target/classes/tran/example/model/security/CustomAuthenticationProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpringBlogApp.iml" afterPath="$PROJECT_DIR$/SpringBlogApp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/AddPostController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/AddPostController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/DeletePostController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/DeletePostController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/EditPostController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/EditPostController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/LoginFormController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/LoginFormController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/RegisterFormController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/RegisterFormController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/ShowPostsController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/ShowPostsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/ShowSinglePost.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/ShowSinglePost.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/database/Datasource.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/database/Datasource.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editPost.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editPost.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showPosts.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showPosts.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showSinglePost.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showSinglePost.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/properties/database.properties" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/properties/database.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/views/addPost.jsp" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/views/addPost.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/spring/database/Datasource.xml" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/classes/spring/database/Datasource.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/views/editPost.jsp" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/views/editPost.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/views/showPosts.jsp" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/views/showPosts.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/views/showSinglePost.jsp" afterPath="$PROJECT_DIR$/target/SpringBlogApp/WEB-INF/views/showSinglePost.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringBlogApp/resources/firstTheme/javascript/custom-parsley-validator.js" afterPath="$PROJECT_DIR$/target/SpringBlogApp/resources/firstTheme/javascript/custom-parsley-validator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/properties/database.properties" afterPath="$PROJECT_DIR$/target/classes/properties/database.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/database/Datasource.xml" afterPath="$PROJECT_DIR$/target/classes/spring/database/Datasource.xml" />
     </list>
     <ignored path="SpringBlogApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,6 +92,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CustomAuthenticationProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/service/CustomAuthenticationProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="850">
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/service/UserDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="database.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/properties/database.properties">
           <provider selected="true" editor-type-id="text-editor">
@@ -121,6 +152,7 @@
         <option value="$PROJECT_DIR$/src/main/java/tran/example/controller/DeletePostController.java" />
         <option value="$PROJECT_DIR$/src/main/java/tran/example/model/security/CustomAuthenticationProvider.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/tran/example/service/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/properties/database.properties" />
       </list>
     </option>
@@ -146,7 +178,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1024" />
+    <option name="x" value="537" />
+    <option name="y" value="23" />
     <option name="width" value="1024" />
     <option name="height" value="1112" />
   </component>
@@ -175,6 +208,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -344,12 +380,39 @@
               <option name="myItemId" value="example" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpringBlogApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spring-Blog-Heroku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -894,15 +957,16 @@
       <workItem from="1481938019184" duration="5000" />
       <workItem from="1481938037523" duration="24000" />
       <workItem from="1481938132226" duration="4000" />
-      <workItem from="1481941043877" duration="1593000" />
+      <workItem from="1481941043877" duration="2674000" />
+      <workItem from="1481944555484" duration="207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19804000" />
+    <option name="totallyTimeSpent" value="21092000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1024" y="0" width="1024" height="1112" extended-state="0" />
+    <frame x="537" y="23" width="1024" height="1112" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -965,6 +1029,32 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/service/CustomAuthenticationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/service/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/database.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -997,7 +1087,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/security/CustomAuthenticationProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/service/CustomAuthenticationProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
@@ -1015,7 +1105,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/security/CustomAuthenticationProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/service/CustomAuthenticationProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
@@ -1033,7 +1123,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/security/CustomAuthenticationProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/service/CustomAuthenticationProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
@@ -1051,7 +1141,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/dao/UserMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/data/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -1067,7 +1157,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/dao/UserMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/data/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -1083,7 +1173,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/dao/UserMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/data/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -1099,7 +1189,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/dao/UserMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/data/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -1130,7 +1220,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/dao/UserMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/data/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
@@ -1145,19 +1235,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/dao/UserDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/data/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
           <folding>
-            <marker date="1481942339590" expanded="true" signature="672:742" ph="insert into Users... " />
-            <marker date="1481942339590" expanded="true" signature="1019:1072" ph="insert into User_Roles... " />
-            <marker date="1481942339590" expanded="true" signature="1127:1164" ph="delete FROM " />
-            <marker date="1481942339590" expanded="true" signature="1216:1257" ph="delete FROM " />
-            <marker date="1481942339590" expanded="true" signature="1466:1505" ph="SELECT * FRO... Users" />
-            <marker date="1481942339590" expanded="true" signature="1554:1600" ph="SELECT role User_Roles" />
-            <marker date="1481942339590" expanded="true" signature="1656:1703" ph="SELECT user_... Users" />
-            <marker date="1481942339590" expanded="true" signature="1762:1819" ph="UPDATE Users... " />
+            <marker date="1481944649648" expanded="true" signature="673:743" ph="insert into Users... " />
+            <marker date="1481944649648" expanded="true" signature="1020:1073" ph="insert into User_Roles... " />
+            <marker date="1481944649648" expanded="true" signature="1128:1165" ph="delete FROM " />
+            <marker date="1481944649648" expanded="true" signature="1217:1258" ph="delete FROM " />
+            <marker date="1481944649648" expanded="true" signature="1467:1506" ph="SELECT * FRO... Users" />
+            <marker date="1481944649648" expanded="true" signature="1555:1601" ph="SELECT role User_Roles" />
+            <marker date="1481944649648" expanded="true" signature="1657:1704" ph="SELECT user_... Users" />
+            <marker date="1481944649648" expanded="true" signature="1763:1820" ph="UPDATE Users... " />
           </folding>
         </state>
       </provider>
@@ -1247,17 +1337,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/dao/BlogDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/data/BlogDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
           <folding>
-            <marker date="1481942339581" expanded="true" signature="677:728" ph="SELECT * FRO... Blogs" />
-            <marker date="1481942339581" expanded="true" signature="777:814" ph="SELECT * FRO... Blogs" />
-            <marker date="1481942339581" expanded="true" signature="861:977" ph="INSERT into Blogs... " />
-            <marker date="1481942339581" expanded="true" signature="1037:1108" ph="SELECT * FRO... Blogs" />
-            <marker date="1481942339581" expanded="true" signature="1157:1212" ph="DELETE FROM " />
-            <marker date="1481942339581" expanded="true" signature="1510:1584" ph="UPDATE Blogs... " />
+            <marker date="1481944649618" expanded="true" signature="678:729" ph="SELECT * FRO... Blogs" />
+            <marker date="1481944649618" expanded="true" signature="778:815" ph="SELECT * FRO... Blogs" />
+            <marker date="1481944649618" expanded="true" signature="862:978" ph="INSERT into Blogs... " />
+            <marker date="1481944649618" expanded="true" signature="1038:1109" ph="SELECT * FRO... Blogs" />
+            <marker date="1481944649618" expanded="true" signature="1158:1213" ph="DELETE FROM " />
+            <marker date="1481944649618" expanded="true" signature="1511:1585" ph="UPDATE Blogs... " />
           </folding>
         </state>
       </provider>
@@ -1310,14 +1400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/security/UserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1326,7 +1408,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/security/CustomAuthenticationProvider.java">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/service/CustomAuthenticationProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
@@ -1336,10 +1426,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tran/example/service/UserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        <state relative-caret-position="238">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
           <folding />
         </state>
       </provider>
