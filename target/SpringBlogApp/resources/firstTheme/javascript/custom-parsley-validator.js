@@ -27,9 +27,8 @@ window.Parsley.addValidator('passwordcheck',
 $(document).ready(function() {
 	$("#userName").focusout(function() {
 		var entered_user_name = $("#userName").val();
-		var url_host = "/SpringBlogApp" + "/userNameCheckDB";
 		$.ajax({
-			url: url_host,
+			url: "/userNameCheckDB",
 			type : "GET",
 			data: 'userName=' + entered_user_name,
 			success: function(data) {

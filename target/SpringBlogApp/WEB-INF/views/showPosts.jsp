@@ -56,9 +56,9 @@
 	        				<h2 class="blog-post-title"> 
 	        					<a href = "<c:url value="/showSinglePost?blogID=${blogPost.getPostID()}"/>">${blogPost.getTitle()}</a>
 	        				</h2>
-	        				<p class="blog-post-meta"> Written by ${blogPost.getAuthor()} at ${blogPost.printDateInFormat(blogPost.getDateCreated())} </p>
-       						<c:if test="${!blogPost.getDateCreated().equals(blogPost.getDateModified())}">
-       							<p class="blog-post-meta"> Last modified by ${blogPost.getAuthor()} at ${blogPost.printDateInFormat(blogPost.getDateModified())} </p>
+	        				<p class="blog-post-meta"> Written by ${blogPost.getAuthor()} on ${blogPost.getDateCreated()} </p>
+       						<c:if test="${blogPost.hasPostBeenModified()}">
+       							<p class="blog-post-meta"> Last modified by ${blogPost.getAuthor()} on ${blogPost.getDateModified()} </p>
        						</c:if>
        						<pre><code>${blogPost.getContent()}</code></pre>
        						<hr>

@@ -23,27 +23,36 @@
 	</c:if>
 	
 	<div class="container">
-		<div class="blog-header">
+		<form class="form-signin" action = "<c:url value="/processAddPost"/>" method="post">
+			<c:if test = "${errorMessage!= null}" >
+				<p class="lead blog-description">${errorMessage}</p>
+			</c:if>
 			<h1 class="blog-title">Create Post</h1>
-			<p class="lead blog-description">Fill in the information below to create your post!</p>
-		</div>
-		
-		<div class="row">
-			<div class="col-sm-8 blog-main">
-				<div class="blog-post">
-					<form action = "<c:url value="/processAddPost"/>" method="post">
-						<label>Subject/Title:</label> <br/>
-						<input type = "text" name = "title" maxlength = "50" size = "50" required/> <br/> <br/>
-						
-						<label>Post Content:</label> <br/>
-						<textarea rows = "8" cols = "80" name = "content"> </textarea> <br/> <br/>
-						
-						<button type="submit">Create Post</button>
-						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-					</form>
-				</div><!-- /.blog-post -->
-			</div><!-- /.blog-main -->
-		</div><!-- /.row -->	
+			<label for="title">Subject/Title:</label> <br/>
+			<c:choose>
+				<c:when test="${entered_title != null}">
+					<input class="form-control" type="text" id="title" name="title" maxlength="50" size="50" value="${entered_title}"required/> <br/> <br/>
+				</c:when>
+
+				<c:otherwise>
+					<input class="form-control" type="text" id="title" name="title" maxlength="50" size="50" required/> <br/> <br/>
+				</c:otherwise>
+			</c:choose>
+
+			<label>Post Content:</label> <br/>
+			<c:choose>
+				<c:when test="${entered_content != null}">
+					<textarea class="form-control" rows="8" cols="80" id="content" name="content">${entered_content}</textarea> <br/> <br/>
+				</c:when>
+
+				<c:otherwise>
+					<textarea class="form-control" rows="8" cols="80" id="content" name="content"> </textarea> <br/><br/>
+				</c:otherwise>
+			</c:choose>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Create Post</button>
+			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+		</form>
+
 	</div><!-- /.container -->
 
 </body>
