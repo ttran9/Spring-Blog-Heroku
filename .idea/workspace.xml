@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d02dcbaa-0c69-48ef-b095-b05d0e4d4e42" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/ShowSinglePost.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/data/BlogDAO.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/data/BlogDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/data/BlogMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/data/BlogMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/data/CustomUserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/data/CustomUserMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/data/RoleMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/data/RoleMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/data/UserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/data/UserDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/data/UserGetPasswordMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/data/UserGetPasswordMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/data/UserNameMapper.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/data/UserNameMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/AddPostController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/AddPostController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/DeletePostController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/DeletePostController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/EditPostController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/EditPostController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/LoginFormController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/LoginFormController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/LogoutController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/LogoutController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/RegisterFormController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/RegisterFormController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/ShowPostsController.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/controller/ShowPostsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/model/Blog.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/model/Blog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/presentation/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/presentation/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tran/example/service/CustomAuthenticationProvider.java" afterPath="$PROJECT_DIR$/src/main/java/tran/example/service/CustomAuthenticationProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addPost.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addPost.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showPosts.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showPosts.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showSinglePost.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showSinglePost.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/signin.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/signin.jsp" />
-    </list>
+    <list default="true" id="d02dcbaa-0c69-48ef-b095-b05d0e4d4e42" name="Default" comment="" />
     <ignored path="SpringBlogApp.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -1076,12 +1051,12 @@
       <workItem from="1481941043877" duration="2674000" />
       <workItem from="1481944555484" duration="300000" />
       <workItem from="1482182768454" duration="15000" />
-      <workItem from="1482217679787" duration="161000" />
+      <workItem from="1482217679787" duration="222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21361000" />
+    <option name="totallyTimeSpent" value="21422000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="91" y="22" width="1024" height="1112" extended-state="0" />
