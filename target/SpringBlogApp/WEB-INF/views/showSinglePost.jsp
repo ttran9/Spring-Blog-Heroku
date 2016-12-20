@@ -16,7 +16,7 @@
         <nav class="blog-nav">
 			<a class="blog-nav-item active" href="<c:url value="/"/>">Home!</a>
 			<a class="blog-nav-item active" href="<c:url value="/showPosts"/>">View All Posts!</a>
-        	<c:if test="${loggedInName != null}">
+			<c:if test="${loggedInName != null}">
 				<a class="blog-nav-item active" href="<c:url value="/addPost"/>">Add A Post!</a>
 			</c:if>
 		</nav>
@@ -37,7 +37,7 @@
     		</div>	
 		</c:otherwise>
 	</c:choose>
-	
+
 	<div class = "container">
 		<div class="blog-header">
 			<div class="row">
@@ -48,15 +48,15 @@
 								<h2 class="blog-post-title">${postContents.getTitle()}</h2>
 								<p class="blog-post-meta"> Written by ${postContents.getAuthor()} on ${postContents.getDateCreated()} </p>
 								<c:if test="${postContents.hasPostBeenModified()}">
-										<p class="blog-post-meta"> Last modified by ${postContents.getAuthor()} on ${postContents.getDateModified()} </p>
-									</c:if>
+									<p class="blog-post-meta"> Last modified by ${postContents.getAuthor()} on ${postContents.getDateModified()} </p>
+								</c:if>
 								<pre><code>${postContents.getContent()}</code></pre>
 								<c:if test="${isAuthorOfPost != null && isAuthorOfPost}">
 									<h2><a class="extra-options" href = "<c:url value="/deleteSinglePost?blogID=${postContents.getPostID()}"/>">Delete This Post</a></h2>
 									<h2><a class="extra-options-two" href = "<c:url value="/showEditPost?blogID=${postContents.getPostID()}"/>">Edit This Post</a></h2> <br/>
 								</c:if>
-								<c:if test="${error != null}">
-									<p><h2 class="extra-options" >${error}</h2></p>
+								<c:if test="${errorMessage != null}">
+									<p><h2 class="extra-options" >${errorMessage}</h2></p>
 								</c:if>
 							</c:when>
 							<c:otherwise>
@@ -71,7 +71,7 @@
 					</div>
 				</div>
 			</div>
-		</div> 
+		</div>
 	</div>
 	
 		

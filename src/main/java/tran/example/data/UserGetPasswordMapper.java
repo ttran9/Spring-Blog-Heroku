@@ -1,9 +1,9 @@
 package tran.example.data;
 
+import org.springframework.jdbc.core.RowMapper;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import org.springframework.jdbc.core.RowMapper;
 
 public class UserGetPasswordMapper implements RowMapper<String> {
 

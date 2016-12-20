@@ -9,6 +9,7 @@ import org.springframework.transaction.support.DefaultTransactionDefinition;
 import tran.example.presentation.model.CustomUser;
 import tran.example.presentation.model.Role;
 import tran.example.presentation.model.User;
+import tran.example.service.UserService;
 
 import javax.sql.DataSource;
 import java.time.LocalDateTime;
@@ -16,7 +17,7 @@ import java.time.LocalDateTime;
 public class UserDAO {
 
 	private final static String INSERT_INTO_USERS = "insert into Users (user_Name, user_Password, enabled) values (?, ?, ?)";
-	private final static String USER_INSERTION_SUCCESS = "user was successfully created, go to the login page to log in!";
+	private final static String USER_INSERTION_SUCCESS = "user was successfully created!";
 	private final static String USER_INSERTION_ERROR = "user already exists, try another user name.";
 	private final static String INSERT_INTO_USER_ROLES = "insert into User_Roles (username, role) values (?, ?)";
 	
@@ -135,7 +136,8 @@ public class UserDAO {
 				canPost = true;
 			}
 			else if (user != null && user.getLastPostedTime() != null) {
-				canPost = user.canUserPost(user.getLastPostedTime());
+				UserService userService = new UserService();
+				canPost = userService.canUserPost(user.getLastPostedTime());
 			}
 		}
 		catch(DataAccessException e) {

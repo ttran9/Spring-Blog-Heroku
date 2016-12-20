@@ -1,11 +1,10 @@
 package tran.example.data;
 
+import org.springframework.jdbc.core.RowMapper;
+import tran.example.presentation.model.CustomUser;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import org.springframework.jdbc.core.RowMapper;
-
-import tran.example.presentation.model.CustomUser;
 
 public class CustomUserMapper implements RowMapper<CustomUser> {
     public CustomUser mapRow(ResultSet rs, int rowNum)  {

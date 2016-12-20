@@ -1,11 +1,10 @@
 package tran.example.data;
 
+import org.springframework.jdbc.core.RowMapper;
+import tran.example.presentation.model.Role;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import org.springframework.jdbc.core.RowMapper;
-
-import tran.example.presentation.model.Role;
 
 public class RoleMapper implements RowMapper<Role> {
 	public Role mapRow(ResultSet rs, int rowNum)  {

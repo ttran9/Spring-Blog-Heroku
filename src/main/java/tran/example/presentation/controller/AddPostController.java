@@ -1,77 +1,43 @@
 package tran.example.presentation.controller;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import tran.example.data.BlogDAO;
-import tran.example.data.UserDAO;
+import tran.example.service.AddPostControllerService;
 
 import java.security.Principal;
-import java.sql.Timestamp;
-import java.time.Instant;
-import java.time.LocalDateTime;
 
+/**
+ * @Author Todd
+ * This class provides the mapping for a user to be able to view the web pages to create a post.
+ */
 @Controller
 public class AddPostController {
 
-	@RequestMapping(value="/addPost", method=RequestMethod.GET)
+	@Autowired
+	private AddPostControllerService addPostControllerService;
+
+	private static final String ADD_POST_MAPPING = "/addPost";
+
+	private static final String PROCESS_ADD_POST_MAPPING = "/processAddPost";
+
+	private static final String TITLE_PARAM = "title";
+
+	private static final String CONTENT_PARAM = "content";
+
+
+	@RequestMapping(value=ADD_POST_MAPPING, method=RequestMethod.GET)
 	public String displayAddForm(Principal principal, ModelMap model) {
-		if(principal != null) {
-			String userName = principal.getName();
-			if(userName != null) {
-				model.addAttribute("loggedInName", userName);
-				return "addPost";
-			}
-			else {
-				model.addAttribute("error", "You must be logged in before viewing this page.");
-		    	return "signin";
-			}
-		}
-		else {
-			model.addAttribute("error", "You must be logged in before viewing this page.");
-	    	return "signin";
-		}
+		return addPostControllerService.displayAddForm(principal, model);
 	}
 	
-	@RequestMapping(value = "/processAddPost", method = RequestMethod.POST)
-	public String processAddForm(@RequestParam(value = "title", required = false) String title, 
-			@RequestParam(value = "content", required = false) String content, Principal principal, ModelMap model) {
-		if(principal != null) {
-			String userName = principal.getName();
-			if(userName != null) {
-				ApplicationContext appContext =  new ClassPathXmlApplicationContext("spring/database/Datasource.xml");
-				UserDAO userDAO = (UserDAO)appContext.getBean("userDS");
-				if(userDAO.canUserPost(userName)) {
-					BlogDAO getPosts = (BlogDAO) appContext.getBean("BlogDS");
-					((ConfigurableApplicationContext) appContext).close();
-					int createPostMessage = getPosts.addBlog(title, content, userName);
-					if(createPostMessage != -1) {
-						LocalDateTime current_time = Timestamp.from(Instant.now()).toLocalDateTime();
-						userDAO.updateLastPostedTimeForUser(current_time, userName);
-					}
-					return "redirect:showSinglePost?blogID=" + createPostMessage;
-				}
-				else {
-					model.addAttribute("entered_title", title);
-					model.addAttribute("errorMessage", "You must wait 30 seconds from editing or posting to add another post.");
-					model.addAttribute("entered_content", content);
-					model.addAttribute("loggedInName", userName);
-					return "addPost";
-				}
-			}
-			else {
-				model.addAttribute("error", "You must be logged in before creating a post.");
-		    	return "signin";
-			}
-		}
-		else {
-			model.addAttribute("error", "You must be logged in before creating a post.");
-	    	return "signin";
-		}
+	@RequestMapping(value=PROCESS_ADD_POST_MAPPING, method=RequestMethod.POST)
+	public String processAddForm(@RequestParam(value=TITLE_PARAM, required=false) String title,
+								 @RequestParam(value=CONTENT_PARAM, required=false) String content, Principal principal,
+								 ModelMap model) {
+		return addPostControllerService.processAddForm(title, content, principal, model);
 	}
 }

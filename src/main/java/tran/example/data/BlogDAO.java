@@ -1,19 +1,18 @@
 package tran.example.data;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.sql.Timestamp;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import javax.sql.DataSource;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
-
 import tran.example.presentation.model.Blog;
+
+import javax.sql.DataSource;
+import java.sql.Timestamp;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.util.List;
 
 public class BlogDAO {
 
@@ -45,9 +44,9 @@ public class BlogDAO {
 	public void setTransactionManager(PlatformTransactionManager transactionManager) {
 		this.transactionManager = transactionManager;
 	}
-	
+
 	public List<Blog> getBlogs() {
-		List<Blog> blogsList = new ArrayList<Blog>();
+		List<Blog> blogsList = null;
 		try {
 			LocalDateTime current_time = setDate();
 			blogsList = jdbcTemplateObject.query(GET_BLOG_POSTS, new BlogMapper(current_time));
@@ -57,17 +56,16 @@ public class BlogDAO {
 		}
 		return blogsList;
 	}
-	
+
 	// get a single Blog using the ID.
 	public Blog getaBlog(int blogID) {
-		Blog singlePost;
+		Blog singlePost = null;
 		try {
 			LocalDateTime current_time = setDate();
 			singlePost = jdbcTemplateObject.queryForObject(GET_BLOG_POST, new Object[]{blogID}, new BlogMapper(current_time));
 		}
 		catch(DataAccessException e) {
 			e.printStackTrace();
-			singlePost = null;
 		}
 		return singlePost;
 	}
@@ -75,10 +73,11 @@ public class BlogDAO {
 	// helper method to determine if the user can view certain options.
 	public boolean isAuthorOfPost(String author, int blogID) {
 		Blog getPost = getaBlog(blogID);
-		if(getPost.getAuthor().equals(author))
-			return true;
-		else 
-			return false;
+		if(getPost != null) {
+			if (getPost.getAuthor().equals(author))
+				return true;
+		}
+		return false;
 	}
 	
 	// add a post.
@@ -137,24 +136,27 @@ public class BlogDAO {
 			return DELETE_POST_ERROR;
 		}
 	}
-	
+
 	public String updatePost(int blogID, String newContent) {
 		// first check if there were any changes from the original post, if there isn't editing isn't necesary.
-		Blog oldContent = new Blog();
+		Blog oldContent = null;
 		oldContent = getaBlog(blogID);
 		
-		//String delimitedContent = newContent.replaceAll("'", "''"); 
-		if(newContent.equals(oldContent.getContent())) {
-			return EDIT_POST_NOT_CHANGED;
-		}
-		else {
-			try {
-				jdbcTemplateObject.update(EDIT_POST, newContent, setDate(), blogID);
-				return EDIT_POST_SUCCESS;
+		//String delimitedContent = newContent.replaceAll("'", "''");
+		if(oldContent != null) {
+			if(newContent.equals(oldContent.getContent())) {
+				return EDIT_POST_NOT_CHANGED;
 			}
-			catch(DataAccessException e) {
-				return EDIT_POST_ERROR;
+			else {
+				try {
+					jdbcTemplateObject.update(EDIT_POST, newContent, setDate(), blogID);
+					return EDIT_POST_SUCCESS;
+				}
+				catch(DataAccessException e) {
+					e.printStackTrace();
+				}
 			}
 		}
+		return EDIT_POST_ERROR;
 	}
 }

@@ -32,11 +32,10 @@
 			</c:choose>
 			<input type="password" name="password" class="form-control" placeholder = "password here" maxlength = "16" size = "16" data-parsley-passwordcheck = "((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%])(?!.*\\s).{6,20})" 
     		data-parsley-required="true" novalidate>
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Login!</button>
 			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 			<c:if test="${error != null}">
-				<br/>
-	    		<div class = "form-control" id = "infoField">${error}</div>
+				<p class="lead blog-description">${error}</p>
 			</c:if>
 		</form>
 	</div>

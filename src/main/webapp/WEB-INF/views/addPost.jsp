@@ -24,9 +24,6 @@
 	
 	<div class="container">
 		<form class="form-signin" action = "<c:url value="/processAddPost"/>" method="post">
-			<c:if test = "${errorMessage!= null}" >
-				<p class="lead blog-description">${errorMessage}</p>
-			</c:if>
 			<h1 class="blog-title">Create Post</h1>
 			<label for="title">Subject/Title:</label> <br/>
 			<c:choose>
@@ -51,6 +48,9 @@
 			</c:choose>
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Create Post</button>
 			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+			<c:if test = "${errorMessage!= null}" >
+				<p class="lead blog-description">${errorMessage}</p>
+			</c:if>
 		</form>
 
 	</div><!-- /.container -->

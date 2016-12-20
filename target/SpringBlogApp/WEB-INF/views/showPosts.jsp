@@ -41,9 +41,9 @@
 		 <div class="blog-header">
 	        <h1 class="blog-title">Todd's Spring Java MVC Blog.</h1>
 	        <p class="lead blog-description">This uses bootstrap styling and Java as the server-side programming language. <br/> I have integrated Spring MVC and Spring Security into this version.</p>
-         	<c:if test="${error != null}">
+         	<c:if test="${errorMessage != null}">
          		<br/>
-    			<div class = "form-control" id = "infoField">${error}</div>
+    			<div class="lead blog-description" id = "infoField">${errorMessage}</div>
          	</c:if>
 	      </div>
 		
@@ -53,7 +53,7 @@
          		<c:when test="${blogs != null}">
          			<c:forEach var="blogPost"  items="${blogs}">
        					<div class="blog-post">
-	        				<h2 class="blog-post-title"> 
+	        				<h2 class="blog-post-title">
 	        					<a href = "<c:url value="/showSinglePost?blogID=${blogPost.getPostID()}"/>">${blogPost.getTitle()}</a>
 	        				</h2>
 	        				<p class="blog-post-meta"> Written by ${blogPost.getAuthor()} on ${blogPost.getDateCreated()} </p>

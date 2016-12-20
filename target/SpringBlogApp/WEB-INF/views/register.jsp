@@ -26,7 +26,7 @@
     		data-parsley-error-message="The password must have each of the following: '@', '#', '$', '%',lowercase letter, uppercase letter, and number.\nThe length must be between 6 to 20 characters." data-parsley-required="true" novalidate/>
     		<input type="password" name="validatePassword" class="form-control" placeholder="enter password again" maxlength = "20" data-parsley-equalto="#password"
  			data-parsley-error-message="Passwords must match!" data-parsley-required="true" novalidate/>
-			<button class="btn btn-lg btn-primary btn-block" type="submit" id = "register" disabled>Register user!</button>
+			<button class="btn btn-lg btn-primary btn-block" type="submit" id = "register" disabled>Register User!</button>
 			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 			<br/>
    			<div class = "hidden-div-field" id = "infoField" >
