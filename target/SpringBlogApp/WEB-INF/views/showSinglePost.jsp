@@ -17,7 +17,7 @@
 			<a class="blog-nav-item active" href="<c:url value="/"/>">Home!</a>
 			<a class="blog-nav-item active" href="<c:url value="/showPosts"/>">View All Posts!</a>
 			<c:if test="${loggedInName != null}">
-				<a class="blog-nav-item active" href="<c:url value="/addPost"/>">Add A Post!</a>
+				<a class="blog-nav-item active" href="<c:url value="/displayAddForm"/>">Add A Post!</a>
 			</c:if>
 		</nav>
       </div>

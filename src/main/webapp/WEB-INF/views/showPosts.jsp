@@ -16,7 +16,7 @@
         <nav class="blog-nav">
 			<a class="blog-nav-item active" href="<c:url value="/"/>">Home!</a>
 			<c:if test="${loggedInName != null}">
-				<a class="blog-nav-item active" href="<c:url value="/addPost"/>">Make A Post!</a>
+				<a class="blog-nav-item active" href="<c:url value="/displayAddForm"/>">Make A Post!</a>
 			</c:if>
         </nav>
       </div>

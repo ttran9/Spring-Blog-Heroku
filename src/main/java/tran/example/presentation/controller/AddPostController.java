@@ -6,6 +6,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import tran.example.service.AddPostControllerService;
 
 import java.security.Principal;
@@ -20,7 +21,7 @@ public class AddPostController {
 	@Autowired
 	private AddPostControllerService addPostControllerService;
 
-	private static final String ADD_POST_MAPPING = "/addPost";
+	private static final String ADD_POST_MAPPING = "/displayAddForm";
 
 	private static final String PROCESS_ADD_POST_MAPPING = "/processAddPost";
 
@@ -30,14 +31,14 @@ public class AddPostController {
 
 
 	@RequestMapping(value=ADD_POST_MAPPING, method=RequestMethod.GET)
-	public String displayAddForm(Principal principal, ModelMap model) {
-		return addPostControllerService.displayAddForm(principal, model);
+	public String displayAddForm(Principal principal, ModelMap model, RedirectAttributes requestAttributes) {
+		return addPostControllerService.displayAddForm(principal, model, requestAttributes);
 	}
 	
 	@RequestMapping(value=PROCESS_ADD_POST_MAPPING, method=RequestMethod.POST)
 	public String processAddForm(@RequestParam(value=TITLE_PARAM, required=false) String title,
 								 @RequestParam(value=CONTENT_PARAM, required=false) String content, Principal principal,
-								 ModelMap model) {
-		return addPostControllerService.processAddForm(title, content, principal, model);
+								 ModelMap model, RedirectAttributes requestAttributes) {
+		return addPostControllerService.processAddForm(title, content, principal, model, requestAttributes);
 	}
 }

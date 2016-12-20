@@ -5,6 +5,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import tran.example.data.BlogDAO;
 import tran.example.data.UserDAO;
 
@@ -22,13 +23,13 @@ public class AddPostControllerService {
 
     private static final String ADD_POST_PAGE = "addPost";
 
-    private static final String SIGNIN_PAGE = "signin";
+    private static final String SIGNIN_PAGE = "redirect:/displayAddForm";
 
     private static final String LOGGED_IN_NAME_KEY = "loggedInName";
 
     private static final String ENTERED_TITLE_KEY = "entered_title";
 
-    private static final String MESSAGE_KEY = "error";
+    private static final String MESSAGE_KEY = "message";
 
     private static final String ERROR_MESSAGE_KEY = "errorMessage";
 
@@ -50,7 +51,7 @@ public class AddPostControllerService {
 
     private static final String REDIRECT_TO_SINGLE_POST = "redirect:showSinglePost?blogID=";
 
-    public String displayAddForm(Principal principal, ModelMap model) {
+    public String displayAddForm(Principal principal, ModelMap model, RedirectAttributes requestAttributes) {
         if(principal != null) {
             String userName = principal.getName();
             if(userName != null) {
@@ -58,17 +59,18 @@ public class AddPostControllerService {
                 return ADD_POST_PAGE;
             }
             else {
-                model.addAttribute(MESSAGE_KEY, NOT_LOGGED_IN_ERROR_MESSAGE);
+                requestAttributes.addAttribute(MESSAGE_KEY, NOT_LOGGED_IN_ERROR_MESSAGE);
                 return SIGNIN_PAGE;
             }
         }
         else {
-            model.addAttribute(MESSAGE_KEY, NOT_LOGGED_IN_ERROR_MESSAGE);
+            requestAttributes.addAttribute(MESSAGE_KEY, NOT_LOGGED_IN_ERROR_MESSAGE);
             return SIGNIN_PAGE;
         }
     }
 
-    public String processAddForm(String title, String content, Principal principal, ModelMap model) {
+    public String processAddForm(String title, String content, Principal principal, ModelMap model,
+                                 RedirectAttributes requestAttributes) {
         if(principal != null) {
             String userName = principal.getName();
             if(userName != null) {
@@ -94,12 +96,12 @@ public class AddPostControllerService {
                 }
             }
             else {
-                model.addAttribute(MESSAGE_KEY, NOT_LOGGED_IN_BEFORE_CREATING_POST);
+                requestAttributes.addAttribute(MESSAGE_KEY, NOT_LOGGED_IN_BEFORE_CREATING_POST);
                 return SIGNIN_PAGE;
             }
         }
         else {
-            model.addAttribute(MESSAGE_KEY, NOT_LOGGED_IN_BEFORE_CREATING_POST);
+            requestAttributes.addAttribute(MESSAGE_KEY, NOT_LOGGED_IN_BEFORE_CREATING_POST);
             return SIGNIN_PAGE;
         }
     }
