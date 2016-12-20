@@ -48,7 +48,7 @@ public class LoginFormControllerService {
 
     private static final String SPRING_SECURITY_LAST_EXCEPTION_STRING = "SPRING_SECURITY_LAST_EXCEPTION";
 
-    public String displayLogin(Principal principal, ModelMap model, String redirectMessage) {
+    public String displayLogin(Principal principal, ModelMap model) {
         if(principal != null) { // user is already logged in so just send him/her to the showPosts page.
             String userName = principal.getName();
             if(userName != null) {
@@ -59,16 +59,12 @@ public class LoginFormControllerService {
             BlogDAO getPosts = (BlogDAO)appContext.getBean(BLOG_DAO_BEAN_NAME);
             List<Blog> listOfBlogs = getPosts.getBlogs();
             ((ConfigurableApplicationContext)appContext).close();
-
             if(listOfBlogs != null)
                 model.addAttribute(BLOGS_KEY, listOfBlogs);
-
             return SHOW_POSTS_PAGE;
         }
         else {
             // not logged in
-            if(redirectMessage != null) // if not logged in and redirected.
-                model.addAttribute(MESSAGE_KEY, redirectMessage);
             return SIGNIN_PAGE;
         }
     }

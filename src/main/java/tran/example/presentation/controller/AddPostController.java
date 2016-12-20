@@ -31,14 +31,14 @@ public class AddPostController {
 
 
 	@RequestMapping(value=ADD_POST_MAPPING, method=RequestMethod.GET)
-	public String displayAddForm(Principal principal, ModelMap model, RedirectAttributes requestAttributes) {
-		return addPostControllerService.displayAddForm(principal, model, requestAttributes);
+	public String displayAddForm(Principal principal, ModelMap model) {
+		return addPostControllerService.displayAddForm(principal, model);
 	}
 	
 	@RequestMapping(value=PROCESS_ADD_POST_MAPPING, method=RequestMethod.POST)
 	public String processAddForm(@RequestParam(value=TITLE_PARAM, required=false) String title,
-								 @RequestParam(value=CONTENT_PARAM, required=false) String content, Principal principal,
-								 ModelMap model, RedirectAttributes requestAttributes) {
-		return addPostControllerService.processAddForm(title, content, principal, model, requestAttributes);
+								 @RequestParam(value=CONTENT_PARAM, required=false) String content,
+								 Principal principal, ModelMap model) {
+		return addPostControllerService.processAddForm(title, content, principal, model);
 	}
 }
