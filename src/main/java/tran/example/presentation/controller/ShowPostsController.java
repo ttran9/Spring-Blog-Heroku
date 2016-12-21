@@ -12,7 +12,7 @@ import java.security.Principal;
 @Controller
 public class ShowPostsController {
 
-	private static final String SHOW_POSTS_MAPPING = "/showPosts";
+	private static final String SHOW_POSTS_MAPPING = "/";
 
 	@Autowired
     ShowPostsControllerService showPostsControllerService;
