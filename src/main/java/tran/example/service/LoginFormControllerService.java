@@ -41,14 +41,14 @@ public class LoginFormControllerService {
     private static final String GENERIC_LOGIN_ERROR_MESSAGE = "an error has occurred please try again";
 
     private static final String INVALID_CREDENTIALS_ERROR_MESSAGE = "invalid login credentials";
-
+    
     private static final String BLOG_DAO_BEAN_NAME = "BlogDS";
 
     private static final String PATH_TO_DATASOURCE_FILE = "spring/database/Datasource.xml";
 
     private static final String SPRING_SECURITY_LAST_EXCEPTION_STRING = "SPRING_SECURITY_LAST_EXCEPTION";
 
-    public String displayLogin(Principal principal, ModelMap model) {
+    public String displayLogin(Principal principal, ModelMap model, String errorMessage) {
         if(principal != null) { // user is already logged in so just send him/her to the showPosts page.
             String userName = principal.getName();
             if(userName != null) {
@@ -65,6 +65,8 @@ public class LoginFormControllerService {
         }
         else {
             // not logged in
+        	if(errorMessage != null)
+        		model.addAttribute(MESSAGE_KEY, errorMessage);
             return SIGNIN_PAGE;
         }
     }

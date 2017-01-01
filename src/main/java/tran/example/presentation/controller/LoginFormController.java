@@ -24,8 +24,8 @@ public class LoginFormController {
     LoginFormControllerService loginFormControllerService;
 
 	@RequestMapping(value=DISPLAY_LOG_IN_MAPPING, method=RequestMethod.GET)
-	public String displayLogin(Principal principal, ModelMap model) {
-		return loginFormControllerService.displayLogin(principal, model);
+	public String displayLogin(Principal principal, ModelMap model, @RequestParam(value=REDIRECT_MESSAGE_PARAM, required=false) String message) {
+		return loginFormControllerService.displayLogin(principal, model, message);
 	}
 	
 	@RequestMapping(value=DISPLAY_LOG_IN_ERROR_MAPPING, method=RequestMethod.GET)
