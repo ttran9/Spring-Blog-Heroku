@@ -27,12 +27,12 @@
 		<intercept-url pattern="/deleteSinglePost" access="hasRole('ROLE_USER')"/>
 		<intercept-url pattern="/showEditPost" access="hasRole('ROLE_USER')"/>
 		<intercept-url pattern="/processEditPost" access="hasRole('ROLE_USER')"/>
-		<intercept-url pattern="/showPosts" access="permitAll" />
+		<intercept-url pattern="/" access="permitAll" />
 		<intercept-url pattern="/showSinglePost" access="permitAll" />
 		<form-login
 			login-page="/signin?message=you must be logged in to view this page!"
-			default-target-url="/showPosts"
-			authentication-failure-url="/signin?message=failure to go to your targeted page"/>
+			default-target-url="/"
+			authentication-failure-url="/signin?message=Incorrect credentials"/>
 	</http>
 	
 	<authentication-manager id="authenticateManager">
